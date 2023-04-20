@@ -38,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20px 30px;
-    transition: 0.5s;  
+    transition: 3s;  
 }
 .container .result .box:hover {
     transform: translateY(-20px); 

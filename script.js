@@ -8,23 +8,35 @@ function getFizzBuzz(numb)  {
     let buzz=document.getElementById("buzz");
     buzz.style.display="none";
     let fizzbuzz="";
+    fizz.style.transform="translateY(0px)";
+    buzz.style.transform="translateY(0px)";
+    fizz.style.transform="rotate(-360deg)";
+    buzz.style.transform="rotate(-360deg)";
 
     if (numb === undefined || numb === 0 || isNaN(numb)) {
     result = "Invalid input!";
     } else if (numb % 15 === 0) {
     fizz.style.display="block";
     buzz.style.display="block";
+    setTimeout(() => {
+        fizz.style.transform="translateY(-20px)";
+        buzz.style.transform="translateY(-20px)";
+    }, 500);
+    
     // result = "FIZZBUZZ";
     // console.log(result, numb);
     } else if (numb % 3 === 0) {
     fizz.style.display="block";
-    result = "FIZZ";
-    console.log(result, numb);
+    setTimeout(() => {
+        fizz.style.transform="rotate(360deg)";
+        
+    }, 500);
     } else if (numb % 5 === 0) {
-    buzz = 
     buzz.style.display="block";
-    result = "BUZZ";
-    console.log(result, numb);
+    setTimeout(() => {
+        buzz.style.transform="rotate(360deg)";
+        
+    }, 500);
     } else {
     result = numb;
     }
